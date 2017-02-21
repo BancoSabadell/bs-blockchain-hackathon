@@ -53,26 +53,32 @@ contract Token {
 
 The full contract(s) source code can be found [here](https://github.com/BancoSabadell/bs-token), including an utility JavaScript library.
 
-###Contract address
+### BSToken contract address and abi per team
 
-The BS Token contract is deployed at address: **`0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b`**
+team | address | abi
+---| --- | ---
+1 | ? | ?
+2 | ? | ?
+3 | ? | ?
+4 | ? | ?
+5 | ? | ?
 
-###Accounts per team (with a 1.000 token/ether balance)
+### Accounts per team (with a 1.000 token/ether balance)
 
-account | password
----	 | ---
-0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 111111
-0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 222222
-0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 333333
-0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 444444
-0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 555555
+team | account | password
+---| --- | ---
+1 | 0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 111111
+2 |0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 222222
+3 |0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 333333
+4 |0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 444444
+5 |0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b | 555555
 
-###Sample integration (Escrow contract)
+### Sample integration (Escrow contract)
 
 * [bs-escrow: Escrow contract and JavaScript library](https://github.com/BancoSabadell/bs-escrow)
 * [bs-escrow-android-sdk: Android SDK and sample App](https://github.com/BancoSabadell/bs-escrow-android-sdk)
 
-###Add tokens to an account using a credit card (Banking API)
+### Add tokens to an account using a credit card (Banking API)
 
 If you want to add more tokens to an account or plan to accept payments in exchange of tokens we provide a simple REST API to add tokens to an account using a (test) credit card.
 
@@ -82,20 +88,20 @@ The API is located at: `127.0.0.1`, including de following endpoints:
 
 **Add tokens to an account**
 
-	GET /bs_token/api/v1/cashIn
-	
+    GET /bs_token/api/v1/cashIn
+    
 This call will return an HTML page that will inmediately redirect to the credit card payment form.
 
 Parameters:
 
 name | description
----	 | ---
+---  | ---
 account | Ethereum address
 amount | token amount _(1 BST == 1/100 EUR)_
 
 Example ([View in browser](http://127.0.0.1/bs_token/api/v1/cashIn?amount=120&address=0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b)):
 
-	http://127.0.0.1/bs_token/api/v1/cashIn?amount=120&address=0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b
+    http://127.0.0.1/bs_token/api/v1/cashIn?amount=120&address=0x6c8f2a135f6ed072de4503bd7c4999a1a17f824b
 
 Test credit card:
 
@@ -117,5 +123,3 @@ Test credit card:
 ##Contact
 
 Need help? Contact us at: [innodev@bancsabadell.com](mailto:innodev@bancsabadell.com)
-
-
